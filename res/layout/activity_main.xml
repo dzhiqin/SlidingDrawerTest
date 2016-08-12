@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   
+    tools:context="com.example.slidingdrawertest.MainActivity" >
+<!-- android:orientation="vertical"设置为垂直滑动的抽屉
+android:orientation="horizontal"设置为水平滑动的抽屉 -->
+    <SlidingDrawer 
+        android:id="@+id/mDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:handle="@+id/handle"
+        android:content="@+id/content"
+        android:orientation="vertical"
+        >
+        <Button 
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:background="@drawable/handle_up_bg"/>
+        <LinearLayout 
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@drawable/bg"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/alligator"/>
+            <TextView 
+                android:id="@+id/mTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="SlidingDrawerTest"/>
+        </LinearLayout>
+    </SlidingDrawer>
+
+</RelativeLayout>
